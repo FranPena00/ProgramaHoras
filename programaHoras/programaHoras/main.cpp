@@ -18,25 +18,20 @@ int main(int argc, const char * argv[])
     minuto *=60;
     
     int horaInicial = hora + minuto + segundo;
-    //este cout lo puse para ver si se estaba haciendo la conversion bien.
-    cout<<horaInicial;
     
     cout << "Ingrese hora, minutos y segundos de salida: \n";
     cin>>horaF>>minutoF>>segundoF;
     horaF *=3600;
     minutoF *=60;
     int horaFinal = horaF + minutoF + segundoF;
-    //este cout lo puse para ver si se estaba haciendo la conversion bien.
-    cout<<horaFinal;
     
-        horaTrabajada = horaFinal - horaInicial;
-        //este cout lo puse para ver si se estaba haciendo la conversion bien.
-        cout<<"\n"<<horaTrabajada<<"\n";
+    horaTrabajada = horaFinal - horaInicial;
+   
     
     int horas = horaTrabajada/3600;
     horaTrabajada %= 3600;
     minutosTrabajados = horaTrabajada / 60;
-    segundosTrabajados %= 60;
+    segundosTrabajados = horaTrabajada % 60;
     
     cout<<"tu trabajaste: "<<horas<<":"<<minutosTrabajados<<":"<<segundosTrabajados<<"\n";
     
